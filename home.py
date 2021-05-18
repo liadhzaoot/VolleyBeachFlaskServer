@@ -4,6 +4,7 @@ from flask import Flask, url_for, jsonify, request
 from markupsafe import escape
 import pymongo
 from pymongo import MongoClient
+# from flask_cors import CORS
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
@@ -26,4 +27,4 @@ def index():
         return 'indcxxxxx'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
